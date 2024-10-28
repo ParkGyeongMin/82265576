@@ -2,9 +2,9 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     #url / username / password 의 db정보를 변경해야 한다
-    url: jdbc:postgresql://cepg-aa-std-db.postgres.database.azure.com:5432/cloud_sample
+    url: jdbc:postgresql://ce-aa-psql.postgres.database.azure.com:5432/postgres
     username: ktds
-    password: ktds!1234
+    password: Ktds!1234
     hikari:
       maximum-pool-size: 2
       minimum-idle: 2
