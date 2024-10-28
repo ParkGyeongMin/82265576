@@ -1,0 +1,22 @@
+
+#host 주소를 변경 해야 한다.
+# Ingress manifest 작성 시 경로가 [Application이름]-[사번].ce-aa.kubepia.net을 가리키도록 설정해주세요.
+#[사번].ce-aa.kubepia.net/api/v1/user GET 방식으로 사번을 리턴하는 API를 만드세요. 그후 API링크를 제출하세요
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "82265576-ingress"
+spec:
+  ingressClassName: ingress-internal
+  rules:
+  - host: "82265576.ce-aa.kubepia.net"
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: my-82265576
+            port:
+              number: 8080
+        pathType: Prefix

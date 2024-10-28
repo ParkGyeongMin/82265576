@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    #url / username / password 의 db정보를 변경해야 한다
+    url: jdbc:postgresql://ce-aa-psql.postgres.database.azure.com:5432/postgres
+    username: ktds
+    password: Ktds!1234
+    hikari:
+      maximum-pool-size: 2
+      minimum-idle: 2
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  sql:
+    init:
+      # mode: always
+      mode: embedded
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+pvc:
+  path: /mnt/cloud-sample
