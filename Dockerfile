@@ -15,3 +15,4 @@ EXPOSE 8080
 
 # 컨테이너 시작시 기본 명령 설정
 ENTRYPOINT ["java","-jar","/app.jar"]
+
