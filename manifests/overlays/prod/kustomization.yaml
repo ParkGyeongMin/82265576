@@ -14,6 +14,6 @@ namePrefix: prod-
 namespace: "82265576"
 images:
 - name: ceappacr.azurecr.io/82265576
-  newTag: "202410290604"
+  newTag: "202410290635"
 - name: cepgstapacr.azurecr.io/82265576
   newTag: "202410280724"
