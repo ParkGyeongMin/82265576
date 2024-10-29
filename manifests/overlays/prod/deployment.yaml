@@ -22,7 +22,7 @@ spec:
       volumes:
       - name: "82265576-volume"
         persistentVolumeClaim:
-          claimName: cepg-aa-std-pvc
+          claimName: ce-aa-std-pvc
       - name: application-properties
         configMap:
           name: "82265576-configmap"
